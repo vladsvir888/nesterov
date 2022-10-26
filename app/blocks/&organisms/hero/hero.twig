@@ -1,0 +1,44 @@
+<div class="hero">
+  <div class="hero__img-wrap">
+    {% include "../../@atoms/image/image.twig" with {
+      image: {
+        class: "hero__img",
+        lazy: false,
+        name: "hero/01.jpg"
+      }
+    } %}
+  </div>
+  <div class="hero__content">
+    {% include "../../@atoms/title/title.twig" with {
+      title: {
+        class: "title--h1 hero__title",
+        text: "Квартиры, которые <span class='hero__title-span'>подстраиваются</span> под&nbsp;ваш образ жизни"
+      }
+    } %}
+
+    <div class="hero__inner">
+      {% include "../../@atoms/text/text.twig" with {
+        text: {
+          class: "hero__text",
+          text: "В нашем жилом комплексе ваша квартира станет пространством, где технологии, инфраструктура, дизайн и архитектура  объединяются ради вашего комфорта."
+        }
+      } %}
+
+      {% include "../../@atoms/button/button.twig" with {
+        button: {
+          class: "hero__btn btn--round",
+          href: "#",
+          text: {
+            class: "hero__btn-text",
+            text: "Выбрать квартиру"
+          },
+          icon: {
+            class: "hero__btn-icon",
+            name: "sprite-mono.svg#arrow-right"
+          },
+          icon_pos_right: true
+        }
+      } %}
+    </div>
+  </div>
+</div>

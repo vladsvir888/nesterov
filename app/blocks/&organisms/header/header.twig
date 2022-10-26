@@ -1,0 +1,51 @@
+<header class="header">
+  <div class="container header__container">
+    <div class="header__start">
+      <a href="#" class="logo header__logo">
+        <span class="visually-hidden">Главная страница</span>
+        <img src="./assets/images/logo/header-logo.svg" alt="">
+      </a>
+      {% include "../../@atoms/button/button.twig" with {
+        button: {
+          class: "header__location",
+          href: "#id",
+          icon: {
+            class: "header__location-img",
+            name: "sprite-mono.svg#location-pin"
+          },
+          text: {
+            class: "header__location-text",
+            text: "Новосибирск"
+          }
+        }
+      } %}
+    </div>
+    <div class="header__end">
+      {% include "../../^molecules/callback_block/callback_block.twig" with {
+        callback_block: {
+          class: "header__callback-block",
+          phone_btn: {
+            class: "callback-block__phone header__phone",
+            href: "tel:+74954191518",
+            icon: {
+              class: "header__phone-icon",
+              name: "sprite-mono.svg#mobile-phone"
+            },
+            text: {
+              class: "callback-block__phone-text header__phone-text",
+              text: "+7 495 419-15-18"
+            }
+          },
+          call_btn: {
+            class: "header__callback-btn",
+            text: {
+              class: "header__callback-text",
+              text: "Заказать звонок"
+            }
+          }
+        }
+      } %}
+      {% include "../../@atoms/burger/burger.twig" %}
+    </div>
+  </div>
+</header>

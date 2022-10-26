@@ -1,0 +1,26 @@
+.best-place {
+  padding: pxToRem(118) 0 pxToRem(160) 0;
+  background-color: var(--bridal-heath);
+
+  @include media('1024', max) {
+    padding: pxToRem(81) 0 pxToRem(57) 0;
+  }
+
+  &__title {
+    font-family: var(--helios-font);
+    max-width: pxToRem(800);
+
+    &:not(:last-child) {
+      margin-bottom: pxToRem(67);
+    }
+
+    @include media('1024', max) {
+      @include font-size(36, 50);
+    }
+  }
+
+  &__inner {
+    max-width: calc(23.125rem * 3 + 3.75rem);
+    margin-left: auto;
+  }
+}

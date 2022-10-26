@@ -1,0 +1,43 @@
+.btn {
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--round {
+    &::before {
+      @include pos-center(y);
+      left: 0;
+      z-index: -1;
+      width: pxToRem(78);
+      height: pxToRem(78);
+      border-radius: 50%;
+      background-color: var(--orange-peel);
+      transition: transform var(--transition);
+      content: '';
+    }
+
+    &:hover {
+      &::before {
+        transform: translateY(-50%) translateX(-10px);
+      }
+    }
+  }
+
+  &__text {
+    @include font-size(16, 24);
+    font-weight: 300;
+    transition: color var(--transition);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    fill: currentColor;
+    transition: fill var(--transition);
+
+    &:not(:last-child) {
+      margin-right: pxToRem(4);
+    }
+  }
+}

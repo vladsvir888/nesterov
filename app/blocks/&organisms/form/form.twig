@@ -1,0 +1,38 @@
+{% if form.content %}
+  {% set form_content %}
+    {% if form.content.title %}
+      {% include "../../@atoms/title/title.twig" with {
+        title: form.content.title
+      } %}
+    {% endif %}
+
+    <div class="form__inner">
+      {% if form.content.inputs %}
+        <div class="form__inputs">
+          {% for input in form.content.inputs %}
+            {% include "../../@atoms/input/input.twig" with {
+              input: input
+            } %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if form.content.button %}
+        {% include "../../@atoms/button/button.twig" with {
+          button: form.content.button
+        } %}
+      {% endif %}
+    </div>
+  {% endset %}
+{% endif %}
+
+<form
+  class="form {% if form.class %}{{ form.class }}{% endif %}"
+  {% if form.action %}action="{{ form.action }}"{% endif %}
+  {% if form.method %}method="{{ form.method }}"{% endif %}
+  {% if form.name %}name="{{ form.method }}"{% endif %}
+>
+  <div class="form__content {% if form.content.class %}{{ form.content.class }}{% endif %}">
+    {{ form_content }}
+  </div>
+</form>

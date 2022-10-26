@@ -1,0 +1,53 @@
+.icons-block {
+  --offset: 1.875rem;
+
+  @include flex-center-x;
+  flex-wrap: wrap;
+  margin-bottom: calc(var(--offset) * -1);
+  margin-left: calc(var(--offset) * -1);
+  text-align: center;
+
+  &__item {
+    @include flex-column;
+
+    width: calc(100% / 3 - var(--offset));
+    margin-left: var(--offset);
+    margin-bottom: var(--offset);
+
+    @include media('1024', max) {
+      width: calc(100% / 2 - var(--offset));
+    }
+
+    @include media('500', max) {
+      width: calc(100% - var(--offset));
+    }
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-bottom: pxToRem(35);
+    }
+  }
+
+  &__inner {
+    @include flex-column;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    font-weight: 300;
+
+    &:not(:last-child) {
+      margin-bottom: pxToRem(20);
+    }
+  }
+
+  &__text {
+    @include font-size(16, 24);
+    margin-top: auto;
+
+    &:not(:last-child) {
+      margin-bottom: pxToRem(20);
+    }
+  }
+}

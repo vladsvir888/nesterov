@@ -1,0 +1,43 @@
+<aside class="feedback">
+  <div class="container">
+    {% include "../../@atoms/title/title.twig" with {
+      title: {
+        class: "title--h2 feedback__title",
+        level: 2,
+        text: "Будем рады ответить на все ваши вопросы"
+      }
+    } %}
+    {% include "../../&organisms/form/form.twig" with {
+      form: {
+        action: "/",
+        method: "post",
+        class: "form--feedback",
+        content: {
+          title: {
+            level: 3,
+            text: "Заполните форму и наш менеджер свяжется с вами в ближаейшее время"
+          },
+          inputs: [{
+            id: "nameInput",
+            placeholder: "Имя",
+            name: "name"
+          }, {
+            id: "emailOrPhoneInput",
+            placeholder: "Email/Телефон",
+            name: "email/phone"
+          }],
+          button: {
+            class: "btn--round",
+            text: {
+              text: "Отправить"
+            },
+            icon: {
+              name: "sprite-mono.svg#arrow-right"
+            },
+            icon_pos_right: true
+          }
+        }
+      }
+    } %}
+  </div>
+</aside>

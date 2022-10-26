@@ -1,0 +1,17 @@
+{% if footer_list %}
+  <ul class="footer-list {{ footer_list.class }}" role="list">
+    {% for item in footer_list.items %}
+      <li class="footer-list__item">
+        {% include "../../@atoms/button/button.twig" with {
+          button: {
+            href: "#",
+            text: {
+              class: "footer-list__link-text",
+              text: item.text
+            }
+          }
+        } %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

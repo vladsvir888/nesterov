@@ -1,0 +1,45 @@
+{% extends "../blocks/layout/base.twig" %}
+
+{% block content %}
+
+<style>
+  .index-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin: 50px 0;
+  }
+
+  .index-list .btn {
+    color: var(--black);
+  }
+
+  .index-list .btn:hover {
+    color: var(--orange-peel);
+  }
+
+  .index-list .btn .btn__text {
+    font-weight: 700;
+  }
+</style>
+
+{% set pages = [{
+  text: "Главная",
+  link: "home"
+}] %}
+
+<div class="container">
+  <ul class="index-list">
+    {% for page in pages %}
+      <li>
+        <a class="btn" href="{{ page.link }}.html" target="_blank">
+          <span class="btn__text">
+            {{ page.text }}
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<div class="input">
+  <input
+    {% if input.type %}
+      type="{{ input.type }}"
+    {% else %}
+      type="text"
+    {% endif %}
+    id="{{ input.id }}"
+    placeholder="{{ input.placeholder }}"
+    name="{{ input.name }}"
+  >
+  <label
+    for="{{ input.id }}"
+  >
+    {{ input.placeholder }}
+  </label>
+</div>

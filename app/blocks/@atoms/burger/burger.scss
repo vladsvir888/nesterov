@@ -1,0 +1,41 @@
+.burger {
+  $this: &;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: pxToRem(30);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include media('576', max) {
+    height: pxToRem(24);
+  }
+
+  &:hover {
+    #{$this}__item {
+      background-color: var(--orange-peel);
+    }
+  }
+
+  &__item {
+    display: block;
+    height: pxToRem(2);
+    background-color: var(--dark-ebony);
+    transition: background-color var(--transition);
+
+    &--start {
+      width: pxToRem(13);
+    }
+
+    &--middle {
+      width: pxToRem(20);
+    }
+
+    &--end {
+      width: pxToRem(30);
+    }
+  }
+}

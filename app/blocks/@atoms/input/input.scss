@@ -1,0 +1,44 @@
+.input {
+  position: relative;
+
+  > input {
+    @include font-size(14);
+    padding: 0 pxToRem(7) pxToRem(7) 0;
+    color: var(--silver-chalice);
+    border: none;
+    border-bottom: 1px solid var(--black);
+
+    @include placeholder {
+      color: transparent;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus {
+      + label {
+        color: var(--orange-peel);
+        transform: scale(0.8) translateY(-1.5rem) translateX(-0.15rem);
+      }
+    }
+
+    &:not(:placeholder-shown) {
+      + label {
+        color: var(--orange-peel);
+        transform: scale(0.8) translateY(-1.5rem) translateX(-0.15rem);
+      }
+    }
+  }
+
+  > label {
+    @include font-size(18, 24);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--silver-chalice);
+    pointer-events: none;
+    transform-origin: 0 0;
+    transition: transform var(--transition), color var(--transition);
+  }
+}

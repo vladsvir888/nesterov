@@ -1,0 +1,56 @@
+<section class="best-place">
+  <div class="container">
+    {% include "../../@atoms/title/title.twig" with {
+      title: {
+        class: "best-place__title title--h2",
+        level: 2,
+        text: "Подарите себе жизнь в лучшем месте города"
+      }
+    } %}
+
+    <div class="best-place__inner">
+      {% include "../../^molecules/icons_block/icons_block.twig" with {
+        icons_block: {
+          class: "best-place__icons-block",
+          items: [{
+            icon: {
+              name: "sprite-multi.svg#icon-block-1"
+            },
+            title: {
+              class: "best-place__icons-block-title",
+              level: 3,
+              text: "Месторасположение"
+            },
+            text: {
+              text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и&nbsp;модернизации позиций, занимаемых участниками."
+            }
+          }, {
+            icon: {
+              name: "sprite-multi.svg#icon-block-2"
+            },
+            title: {
+              class: "best-place__icons-block-title",
+              level: 3,
+              text: "Удобная транспортная <br /> развязка"
+            },
+            text: {
+              text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и&nbsp;модернизации позиций, занимаемых участниками."
+            }
+          }, {
+            icon: {
+              name: "sprite-multi.svg#icon-block-3"
+            },
+            title: {
+              class: "best-place__icons-block-title",
+              level: 3,
+              text: "Развитая инфраструктура"
+            },
+            text: {
+              text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и&nbsp;модернизации позиций, занимаемых участниками."
+            }
+          }]
+        }
+      } %}
+    </div>
+  </div>
+</section>

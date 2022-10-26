@@ -1,0 +1,65 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="logo footer__logo">
+        <span class="visually-hidden">Главная</span>
+        <img src="./assets/images/logo/footer-logo.svg" alt="">
+      </div>
+
+      {% include "../../^molecules/footer_list/footer_list.twig" with {
+        footer_list: {
+          class: "footer__list footer__list--1",
+          items: [{
+            text: "О проекте"
+          }, {
+            text: "Инфраструктура"
+          }, {
+            text: "Квартиры"
+          }, {
+            text: "Документы"
+          }]
+        }
+      } %}
+
+      {% include "../../^molecules/footer_list/footer_list.twig" with {
+        footer_list: {
+          class: "footer__list footer__list--2",
+          items: [{
+            text: "Условия продаж"
+          }, {
+            text: "Ход строительства"
+          }, {
+            text: "Контакты"
+          }, {
+            text: "О застройщике"
+          }]
+        }
+      } %}
+
+      {% include "../../^molecules/callback_block/callback_block.twig" with {
+        callback_block: {
+          class: "footer__callback-block",
+          phone_btn: {
+            class: "callback-block__phone footer__phone",
+            href: "tel:+74954191518",
+            icon: {
+              class: "footer__phone-icon",
+              name: "sprite-mono.svg#mobile-phone"
+            },
+            text: {
+              class: "callback-block__phone-text footer__phone-text",
+              text: "+7 495 419-15-18"
+            }
+          },
+          call_btn: {
+            class: "footer__callback-btn",
+            text: {
+              class: "footer__callback-text",
+              text: "Заказать звонок"
+            }
+          }
+        }
+      } %}
+    </div>
+  </div>
+</footer>

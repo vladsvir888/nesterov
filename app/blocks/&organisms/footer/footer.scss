@@ -1,0 +1,89 @@
+.footer {
+  $this: &;
+
+  padding: pxToRem(118) 0 pxToRem(141) 0;
+  background-color: var(--kilamanjaro);
+
+  @include media('1024', max) {
+    padding: pxToRem(95) 0 pxToRem(100) 0;
+  }
+
+  @include media('576', max) {
+    padding: pxToRem(50) 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: pxToRem(-20);
+    margin-left: pxToRem(-20);
+
+    > * {
+      margin-bottom: pxToRem(20);
+      margin-left: pxToRem(20);
+    }
+
+    @include media('576', max) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    @include media('767', max) {
+      width: pxToRem(220);
+      order: 1;
+    }
+  }
+
+  &__phone {
+    color: var(--white);
+
+    &:hover {
+      color: var(--orange-peel);
+
+      #{$this}__phone-icon {
+        fill: var(--orange-peel);
+      }
+    }
+
+    &-icon {
+      width: pxToRem(23);
+      height: pxToRem(23);
+      fill: var(--white);
+    }
+  }
+
+  &__callback-block {
+    @include media('767', max) {
+      order: 4;
+    }
+  }
+
+  &__list {
+    @include media('767', max) {
+      &--1 {
+        order: 2;
+      }
+
+      &--2 {
+        order: 3;
+      }
+    }
+  }
+
+  &__callback-btn {
+    color: var(--white);
+
+    &:hover {
+      color: var(--orange-peel);
+    }
+  }
+
+  &__callback-text {
+    @include font-size(18, 24);
+    font-weight: 600;
+  }
+}

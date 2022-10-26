@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px dotted var(--orange-peel);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+  scrollbar-color: var(--dark-ebony) var(--white);
+  scrollbar-width: thin;
+}
+
+body {
+  @include flex-column;
+  height: 100%;
+  font-family: var(--open-sans-font);
+  font-weight: 400;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.main {
+  position: relative;
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.wow {
+  @include media('1024', max) {
+    visibility: visible !important;
+
+    animation-name: none !important;
+  }
+}
+
+.container {
+  @include container;
+}
+
+::-webkit-scrollbar {
+  width: pxToRem(10);
+  height: pxToRem(10);
+  background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-ebony);
+  border-radius: pxToRem(10);
+}

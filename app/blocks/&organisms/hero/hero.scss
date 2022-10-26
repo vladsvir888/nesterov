@@ -1,0 +1,112 @@
+.hero {
+  display: grid;
+
+  @include media('1921', min) {
+    max-width: pxToRem(1920);
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    max-width: pxToRem(1230);
+    padding: pxToRem(80) pxToRem(30) pxToRem(80) pxToRem(163);
+    margin: pxToRem(50) 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.63) 63.22%, rgba(255, 255, 255, 0.4347) 164.28%);
+    backdrop-filter: blur(pxToRem(2));
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: pxToRem(47);
+
+        @include media('767', max) {
+          margin-bottom: pxToRem(10);
+        }
+      }
+    }
+
+    @include media('1200', max) {
+      padding: pxToRem(21) pxToRem(13) pxToRem(40) pxToRem(23);
+      align-items: flex-start;
+    }
+  }
+
+  &__inner {
+    > * {
+      &:not(:last-child) {
+        margin-bottom: pxToRem(60);
+
+        @include media('767', max) {
+          margin-bottom: pxToRem(45);
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: var(--helios-font);
+
+    &-span {
+      word-break: break-word;
+    }
+
+    @include media('1024', max) {
+      @include font-size(60);
+    }
+
+    @include media('500', max) {
+      @include font-size(36, 50);
+    }
+  }
+
+  &__text {
+    max-width: pxToRem(580);
+  }
+
+  &__img-wrap {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &__img {
+    margin-left: auto;
+    width: pxToRem(1335);
+    height: 100%;
+    aspect-ratio: 16 / 9;
+
+    @include media('1200', max) {
+      width: 100%;
+    }
+
+    @include media('767', max) {
+      object-fit: cover;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    padding-left: pxToRem(50);
+    color: var(--black);
+
+    > * {
+      &:not(:last-child) {
+        margin-right: pxToRem(7);
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+
+      @include font-size(18, 24);
+    }
+
+    &-icon {
+      width: pxToRem(23);
+      height: pxToRem(23);
+    }
+  }
+}

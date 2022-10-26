@@ -1,0 +1,95 @@
+.form {
+  $this: &;
+
+  // feedback-form
+  &--feedback {
+    display: flex;
+    justify-content: center;
+
+    @include media('1024', max) {
+      justify-content: flex-start;
+    }
+
+    .title {
+      @include font-size(24, 35);
+      max-width: pxToRem(486);
+      font-weight: 300;
+      color: var(--black);
+
+      &:not(:last-child) {
+        margin-bottom: pxToRem(48);
+      }
+
+      @include media('500', max) {
+        @include font-size(18);
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding-left: pxToRem(50);
+      margin-left: pxToRem(137);
+
+      @include media('1024', max) {
+        align-self: flex-end;
+      }
+
+      > * {
+        &:not(:last-child) {
+          margin-right: pxToRem(11);
+        }
+      }
+
+      &__icon {
+        width: pxToRem(23);
+        height: pxToRem(23);
+      }
+
+      &__text {
+        @include font-size(18, 20);
+        font-weight: 600;
+      }
+    }
+
+    #{$this}__content {
+      @include media('1024', max) {
+        width: 100%;
+      }
+    }
+
+    #{$this}__inner {
+      display: flex;
+
+      @include media('1024', max) {
+        flex-direction: column;
+      }
+    }
+
+    #{$this}__inputs {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: pxToRem(-137);
+      margin-bottom: pxToRem(-36);
+
+      @include media('1024', max) {
+        margin-left: pxToRem(-40);
+        margin-bottom: 0;
+        margin-bottom: pxToRem(20);
+      }
+    }
+
+    .input {
+      margin-left: pxToRem(137);
+      margin-bottom: pxToRem(36);
+
+      @include media('1024', max) {
+        margin-left: pxToRem(40);
+
+        > input {
+          width: pxToRem(270);
+        }
+      }
+    }
+  }
+}

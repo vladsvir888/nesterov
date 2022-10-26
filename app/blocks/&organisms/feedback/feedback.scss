@@ -1,0 +1,24 @@
+.feedback {
+  padding: pxToRem(150) 0 pxToRem(88) 0;
+
+  @include media('1024', max) {
+    padding: pxToRem(104) 0 pxToRem(40) 0;
+  }
+
+  @include media('500', max) {
+    padding: pxToRem(60) 0 pxToRem(40) 0;
+  }
+
+  &__title {
+    max-width: pxToRem(900);
+    font-family: var(--helios-font);
+
+    @include media('1024', max) {
+      @include font-size(36, 50);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: pxToRem(48);
+    }
+  }
+}

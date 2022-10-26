@@ -1,0 +1,12 @@
+.footer-list {
+  &__link-text {
+    @include font-size(18, 40);
+    font-weight: 400;
+    color: var(--white);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--orange-peel);
+    }
+  }
+}

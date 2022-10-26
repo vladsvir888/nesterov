@@ -1,0 +1,33 @@
+<ul class="icons-block {% if icons_block.class %}{{ icons_block.class }}{% endif %}">
+  {% if icons_block.items %}
+    {% for item in icons_block.items %}
+      <li class="icons-block__item">
+        {% if item.icon %}
+          {% include "../../@atoms/icon/icon.twig" with {
+            icon: item.icon|merge({
+              class: "icons-block__icon"
+            })
+          } %}
+        {% endif %}
+
+        <div class="icons-block__inner">
+          {% if item.title %}
+            {% include "../../@atoms/title/title.twig" with {
+              title: item.title|merge({
+                class: "icons-block__title"
+              })
+            } %}
+          {% endif %}
+
+          {% if item.text %}
+            {% include "../../@atoms/text/text.twig" with {
+              text: item.text|merge({
+                class: "icons-block__text"
+              })
+            } %}
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  {% endif %}
+</ul>

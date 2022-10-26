@@ -1,0 +1,18 @@
+.title {
+  $this: &;
+
+  color: var(--dark-ebony);
+  text-transform: uppercase;
+  font-weight: 400;
+
+  $titles:
+    72 90 h1,
+    64 90 h2,
+    24 35 h3;
+
+  @each $fz, $lh, $type in $titles {
+    @at-root .title--#{$type} {
+      @include font-size($fz, $lh);
+    }
+  }
+}

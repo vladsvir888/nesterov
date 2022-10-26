@@ -1,0 +1,22 @@
+.callback-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: color var(--transition);
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: pxToRem(15);
+    }
+  }
+
+  &__phone {
+    @include flex-center-y;
+
+    &-text {
+      @include font-size(18, 24);
+      font-family: var(--roboto-font);
+      font-weight: 400;
+    }
+  }
+}

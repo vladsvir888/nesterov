@@ -117,16 +117,16 @@ body {
   border-radius: pxToRem(10);
 }
 
-.fade {
-  animation: fadeTab 2.5s;
+.transform-effect {
+  animation: transform-effect 1s both;
 }
 
-@keyframes fade {
+@keyframes transform-effect {
   from {
-    opacity: 0.1;
+    transform: translateY(pxToRem(21));
   }
 
   to {
-    opacity: 1;
+    transform: translateX(0);
   }
 }

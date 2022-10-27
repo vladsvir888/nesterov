@@ -23,12 +23,12 @@
 
   &__btn {
     &-text {
-     @include font-size(24, 24);
-     font-weight: 400;
+      @include font-size(24, 24);
+      font-weight: 400;
 
-     @include media('576', max) {
-      @include font-size(18);
-     }
+      @include media('576', max) {
+        @include font-size(18);
+      }
     }
 
     &.active {
@@ -132,6 +132,7 @@
 
   &__title {
     color: var(--black);
+
     @include font-size(24, 35);
 
     &:not(:last-child) {

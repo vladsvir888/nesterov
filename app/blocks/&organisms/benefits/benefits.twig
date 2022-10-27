@@ -11,9 +11,10 @@
   {% include "../benefits_tabs/benefits_tabs.twig" with {
     tabs: {
       content: [{
-        attrs: 'class="benefits-tabs__panel show" role="tabpanel" aria-labelledby="tab-1"',
+        attrs: 'class="tabs__panel benefits-tabs__panel show" role="tabpanel" aria-labelledby="tab-1" data-panel-tab="tab-1"',
         image: {
-          name: "benefits-tabs/01.jpg"
+          name: "benefits-tabs/01.jpg",
+          alt: "Архитектура"
         },
         title: {
           class: "benefits-tabs__title",
@@ -25,9 +26,10 @@
           text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
         }
       }, {
-        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-2"',
+        attrs: 'class="tabs__panel benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-2" data-panel-tab="tab-2"',
         image: {
-          name: "benefits-tabs/01.jpg"
+          name: "benefits-tabs/02.jpg",
+          alt: "Планировки"
         },
         title: {
           class: "benefits-tabs__title",
@@ -39,9 +41,10 @@
           text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
         }
       }, {
-        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-3"',
+        attrs: 'class="tabs__panel benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-3" data-panel-tab="tab-3"',
         image: {
-          name: "benefits-tabs/01.jpg"
+          name: "benefits-tabs/01.jpg",
+          alt: "Паркинг"
         },
         title: {
           class: "benefits-tabs__title",
@@ -53,9 +56,10 @@
           text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
         }
       }, {
-        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-4"',
+        attrs: 'class="tabs__panel benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-4" data-panel-tab="tab-4"',
         image: {
-          name: "benefits-tabs/01.jpg"
+          name: "benefits-tabs/02.jpg",
+          alt: "Двор"
         },
         title: {
           class: "benefits-tabs__title",
@@ -67,9 +71,10 @@
           text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
         }
       }, {
-        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-5"',
+        attrs: 'class="tabs__panel benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-5" data-panel-tab="tab-5"',
         image: {
-          name: "benefits-tabs/01.jpg"
+          name: "benefits-tabs/01.jpg",
+          alt: "Сквер"
         },
         title: {
           class: "benefits-tabs__title",
@@ -84,7 +89,7 @@
 
       nav: [{
         button: {
-          class: "benefits-tabs__btn active",
+          class: "tabs__btn benefits-tabs__btn active",
           attrs: 'type="button" id="tab-1" role="tab" aria-selected="true"',
           text: {
             class: "benefits-tabs__btn-text",
@@ -93,7 +98,7 @@
         }
       }, {
         button: {
-          class: "benefits-tabs__btn",
+          class: "tabs__btn benefits-tabs__btn",
           attrs: 'type="button" id="tab-2" role="tab" aria-selected="false"',
           text: {
             class: "benefits-tabs__btn-text",
@@ -102,7 +107,7 @@
         }
       }, {
         button: {
-          class: "benefits-tabs__btn",
+          class: "tabs__btn benefits-tabs__btn",
           attrs: 'type="button" id="tab-3" role="tab" aria-selected="false"',
           text: {
             class: "benefits-tabs__btn-text",
@@ -111,7 +116,7 @@
         }
       }, {
         button: {
-          class: "benefits-tabs__btn",
+          class: "tabs__btn benefits-tabs__btn",
           attrs: 'type="button" id="tab-4" role="tab" aria-selected="false"',
           text: {
             class: "benefits-tabs__btn-text",
@@ -120,7 +125,7 @@
         }
       }, {
         button: {
-          class: "benefits-tabs__btn",
+          class: "tabs__btn benefits-tabs__btn",
           attrs: 'type="button" id="tab-5" role="tab" aria-selected="false"',
           text: {
             class: "benefits-tabs__btn-text",

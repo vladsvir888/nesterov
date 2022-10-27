@@ -1,0 +1,39 @@
+<div class="tabs benefits-tabs" aria-labelledby="benefits-tablist">
+  <div class="benefits-tabs__content">
+    {% for content in tabs.content %}
+      <div {% if content.attrs %}{{ content.attrs }}{% endif %}>
+        <div class="benefits-tabs__img-wrap">
+          {% if content.image %}
+            {% include "../../@atoms/image/image.twig" with {
+              image: content.image
+            } %}
+          {% endif %}
+        </div>
+        <div class="benefits-tabs__info">
+          <div class="benefits-tabs__info-inner">
+            {% if content.title %}
+              {% include "../../@atoms/title/title.twig" with {
+                title: content.title
+              } %}
+            {% endif %}
+
+            {% if content.text %}
+              {% include "../../@atoms/text/text.twig" with {
+                text: content.text
+              } %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="benefits-tabs__nav" role="tablist" aria-orientation="vertical">
+    {% for nav_item in tabs.nav %}
+      {% if nav_item %}
+        {% include "../../@atoms/button/button.twig" with {
+          button: nav_item.button
+        } %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

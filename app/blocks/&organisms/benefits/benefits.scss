@@ -1,0 +1,34 @@
+.benefits {
+  @include media('1921', min) {
+    max-width: pxToRem(1920);
+    margin: 0 auto;
+  }
+
+
+  &__title {
+    max-width: pxToRem(500);
+    padding-left: pxToRem(971);
+    font-family: var(--helios-font);
+
+    @include media('1440', max) {
+      padding: 0 var(--container-padding);
+
+      &:not(:last-child) {
+        margin-bottom: pxToRem(67);
+
+        @include media('767', max) {
+          margin-bottom: pxToRem(33);
+        }
+      }
+    }
+
+    @include media('767', max) {
+      max-width: 100%;
+      @include font-size(36);
+    }
+
+    @include media('576', max) {
+      @include font-size(34);
+    }
+  }
+}

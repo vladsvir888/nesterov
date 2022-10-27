@@ -1,0 +1,62 @@
+{% set info_items = [{
+  class: "sales-department__btn",
+  href: "#",
+  icon: {
+    class: "sales-department__icon",
+    name: "sprite-mono.svg#location-pin"
+  },
+  text: {
+    text: "Новосибирск, ул. Кульнева, д.&nbsp;3,&nbsp;стр. 1"
+  }
+}, {
+  class: "sales-department__btn",
+  href: "tel:+74954191518",
+  icon: {
+    class: "sales-department__icon",
+    name: "sprite-mono.svg#mobile-phone"
+  },
+  text: {
+    text: "+7 495 419-15-18"
+  }
+}, {
+  class: "sales-department__btn",
+  href: "mailto:info@nesterov.ru",
+  icon: {
+    class: "sales-department__icon",
+    name: "sprite-mono.svg#mail"
+  },
+  text: {
+    text: "info@nesterov.ru"
+  }
+}, {
+  class: "sales-department__btn",
+  href: "#",
+  icon: {
+    class: "sales-department__icon sales-department__icon--insta",
+    name: "sprite-mono.svg#insta"
+  },
+  text: {
+    text: "Instagram"
+  }
+}] %}
+
+<div class="sales-department">
+  <div class="sales-department__inner">
+    {% include "../../@atoms/title/title.twig" with {
+      title: {
+        class: "sales-department__title",
+        level: 3,
+        text: "Отдел продаж"
+      }
+    } %}
+    <div class="sales-department__info">
+      {% for info_item in info_items %}
+        <div class="sales-department__item">
+          {% include "../../@atoms/button/button.twig" with {
+            button: info_item
+          } %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

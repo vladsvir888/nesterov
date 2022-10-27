@@ -4,7 +4,11 @@
   // feedback-form
   &--feedback {
     display: flex;
-    justify-content: center;
+    padding-left: pxToRem(402);
+
+    @include media('1440', max) {
+      padding-left: 0;
+    }
 
     @include media('1024', max) {
       justify-content: flex-start;
@@ -83,12 +87,16 @@
       margin-left: pxToRem(137);
       margin-bottom: pxToRem(36);
 
+      > input {
+        width: pxToRem(270);
+      }
+
       @include media('1024', max) {
         margin-left: pxToRem(40);
 
-        > input {
-          width: pxToRem(270);
-        }
+        // > input {
+        //   width: pxToRem(270);
+        // }
       }
     }
   }

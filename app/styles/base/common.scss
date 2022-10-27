@@ -116,3 +116,17 @@ body {
   background-color: var(--dark-ebony);
   border-radius: pxToRem(10);
 }
+
+.fade {
+  animation: fadeTab 2.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

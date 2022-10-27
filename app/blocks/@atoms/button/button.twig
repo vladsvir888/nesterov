@@ -1,5 +1,5 @@
 {% if button %}
-  <{{ button.href ? "a" : "button" }} {% if button.href %}href="{{ button.href }}"{% endif %} class="btn {{ button.class }}">
+  <{{ button.href ? "a" : "button" }} {% if button.href %}href="{{ button.href }}"{% endif %} class="btn {{ button.class }}"{% if button.attrs %} {{ button.attrs }}{% endif %}>
     {% if button.icon and button.icon_pos_right != true %}
       {% include "../../@atoms/icon/icon.twig" with {
         icon: button.icon|default({})|merge({

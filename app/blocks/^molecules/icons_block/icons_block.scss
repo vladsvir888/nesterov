@@ -1,11 +1,15 @@
 .icons-block {
   --offset: 1.875rem;
 
-  @include flex-center-x;
+  display: flex;
   flex-wrap: wrap;
   margin-bottom: calc(var(--offset) * -1);
   margin-left: calc(var(--offset) * -1);
   text-align: center;
+
+  @include media('767', max) {
+    justify-content: center;
+  }
 
   &__item {
     @include flex-column;

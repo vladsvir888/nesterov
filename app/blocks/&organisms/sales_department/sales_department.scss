@@ -1,0 +1,79 @@
+.sales-department {
+  $this: &;
+  --offset: 2.1875rem;
+
+  &__inner {
+    max-width: pxToRem(1335);
+    padding: pxToRem(101) pxToRem(46) pxToRem(109) pxToRem(179);
+    background-color: var(--dark-ebony);
+    color: var(--white);
+
+    @include media('1921', min) {
+      margin: 0 auto;
+    }
+
+    @include media('1024', max) {
+      padding: pxToRem(63) pxToRem(24) pxToRem(100) pxToRem(24);
+    }
+
+    @include media('576', max) {
+      padding: pxToRem(37) pxToRem(14) pxToRem(49) pxToRem(14);
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: calc(var(--offset) * -1);
+    margin-left: calc(var(--offset) * -1);
+  }
+
+  &__item {
+    margin-bottom: var(--offset);
+    margin-left: var(--offset);
+
+    @include media('1024', max) {
+      width: calc(50% - var(--offset));
+    }
+
+    @include media('576', max) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include font-size(24, 35);
+    color: inherit;
+
+    &:not(:last-child) {
+      margin-bottom: pxToRem(48);
+    }
+  }
+
+  &__btn {
+    @include flex-center-y;
+    color: inherit;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: pxToRem(13);
+      }
+    }
+
+    &:hover {
+      color: var(--orange-peel);
+    }
+  }
+
+  &__icon {
+    width: pxToRem(24);
+    height: pxToRem(24);
+    color: var(--orange-peel);
+
+    &--insta {
+      fill: transparent;
+      stroke: var(--orange-peel);
+    }
+  }
+}

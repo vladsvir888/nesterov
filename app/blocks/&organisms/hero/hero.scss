@@ -1,6 +1,18 @@
 .hero {
   display: grid;
 
+  &:not(:last-child) {
+    padding-bottom: pxToRem(150);
+
+    @include media('767', max) {
+      padding-bottom: pxToRem(86);
+    }
+
+    @include media('576', max) {
+      padding-bottom: pxToRem(63);
+    }
+  }
+
   @include media('1921', min) {
     max-width: pxToRem(1920);
     margin: 0 auto;

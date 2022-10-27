@@ -1,0 +1,133 @@
+<section class="benefits">
+  {% include "../../@atoms/title/title.twig" with {
+    title: {
+      id: "benefits-tablist",
+      class: "title--h2 benefits__title",
+      level: 2,
+      text: "Почему ЖК&nbsp;Nesterov?"
+    }
+  } %}
+
+  {% include "../benefits_tabs/benefits_tabs.twig" with {
+    tabs: {
+      content: [{
+        attrs: 'class="benefits-tabs__panel show" role="tabpanel" aria-labelledby="tab-1"',
+        image: {
+          name: "benefits-tabs/01.jpg"
+        },
+        title: {
+          class: "benefits-tabs__title",
+          level: 3,
+          text: "Архитектура"
+        },
+        text: {
+          class: "benefits-tabs__text",
+          text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
+        }
+      }, {
+        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-2"',
+        image: {
+          name: "benefits-tabs/01.jpg"
+        },
+        title: {
+          class: "benefits-tabs__title",
+          level: 3,
+          text: "Планировки"
+        },
+        text: {
+          class: "benefits-tabs__text",
+          text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
+        }
+      }, {
+        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-3"',
+        image: {
+          name: "benefits-tabs/01.jpg"
+        },
+        title: {
+          class: "benefits-tabs__title",
+          level: 3,
+          text: "Паркинг"
+        },
+        text: {
+          class: "benefits-tabs__text",
+          text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
+        }
+      }, {
+        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-4"',
+        image: {
+          name: "benefits-tabs/01.jpg"
+        },
+        title: {
+          class: "benefits-tabs__title",
+          level: 3,
+          text: "Двор"
+        },
+        text: {
+          class: "benefits-tabs__text",
+          text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
+        }
+      }, {
+        attrs: 'class="benefits-tabs__panel" role="tabpanel" aria-labelledby="tab-5"',
+        image: {
+          name: "benefits-tabs/01.jpg"
+        },
+        title: {
+          class: "benefits-tabs__title",
+          level: 3,
+          text: "Сквер"
+        },
+        text: {
+          class: "benefits-tabs__text",
+          text: "Таким образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками."
+        }
+      }],
+
+      nav: [{
+        button: {
+          class: "benefits-tabs__btn active",
+          attrs: 'type="button" id="tab-1" role="tab" aria-selected="true"',
+          text: {
+            class: "benefits-tabs__btn-text",
+            text: "Современная архитектура"
+          }
+        }
+      }, {
+        button: {
+          class: "benefits-tabs__btn",
+          attrs: 'type="button" id="tab-2" role="tab" aria-selected="false"',
+          text: {
+            class: "benefits-tabs__btn-text",
+            text: "Органичные планировки"
+          }
+        }
+      }, {
+        button: {
+          class: "benefits-tabs__btn",
+          attrs: 'type="button" id="tab-3" role="tab" aria-selected="false"',
+          text: {
+            class: "benefits-tabs__btn-text",
+            text: "Подземный паркинг"
+          }
+        }
+      }, {
+        button: {
+          class: "benefits-tabs__btn",
+          attrs: 'type="button" id="tab-4" role="tab" aria-selected="false"',
+          text: {
+            class: "benefits-tabs__btn-text",
+            text: "Закрытый двор"
+          }
+        }
+      }, {
+        button: {
+          class: "benefits-tabs__btn",
+          attrs: 'type="button" id="tab-5" role="tab" aria-selected="false"',
+          text: {
+            class: "benefits-tabs__btn-text",
+            text: "Собственный сквер"
+          }
+        }
+      }]
+    }
+  } %}
+</section>

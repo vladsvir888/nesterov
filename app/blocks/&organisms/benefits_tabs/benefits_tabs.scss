@@ -1,0 +1,141 @@
+.benefits-tabs {
+  $this: &;
+
+  @include flex-center-y;
+
+  @include media('1440', max) {
+    flex-direction: column;
+  }
+
+  @include media('767', max) {
+    align-items: flex-start;
+  }
+
+  > * {
+    &:not(:last-child) {
+      margin-right: pxToRem(48);
+
+      @include media('1440', max) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__btn {
+    &-text {
+     @include font-size(24, 24);
+     font-weight: 400;
+
+     @include media('576', max) {
+      @include font-size(18);
+     }
+    }
+
+    &.active {
+      #{$this}__btn-text {
+        font-weight: 700;
+        color: var(--dark-ebony);
+      }
+    }
+
+    &:hover {
+      &:not(.active) {
+        #{$this}__btn-text {
+          color: var(--orange-peel);
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include media('1440', max) {
+      order: 1;
+    }
+  }
+
+  &__nav {
+    @include flex-column;
+    align-items: flex-start;
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: pxToRem(60);
+      }
+    }
+
+    @include media('1440', max) {
+      order: 0;
+      margin-bottom: pxToRem(67);
+      padding: 0 var(--container-padding);
+    }
+
+    @include media('767', max) {
+      margin-bottom: pxToRem(46);
+    }
+  }
+
+  &__panel {
+    display: none;
+
+    &.show {
+      display: grid;
+    }
+
+    @include media('576', max) {
+      display: none;
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  &__img-wrap {
+    grid-area: 1 / 2;
+    width: pxToRem(942);
+
+    @include media('1024', max) {
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    grid-area: 1 / 2;
+    padding: pxToRem(58) pxToRem(23);
+
+    @include media('576', max) {
+      padding: pxToRem(23);
+    }
+
+    &-inner {
+      width: pxToRem(489);
+      margin-left: auto;
+      padding: pxToRem(60) pxToRem(48) pxToRem(60) pxToRem(37);
+      background-color: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(pxToRem(2));
+
+      @include media('767', max) {
+        margin-left: 0;
+      }
+
+      @include media('576', max) {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  &__title {
+    color: var(--black);
+    @include font-size(24, 35);
+
+    &:not(:last-child) {
+      margin-bottom: pxToRem(14);
+    }
+  }
+}
